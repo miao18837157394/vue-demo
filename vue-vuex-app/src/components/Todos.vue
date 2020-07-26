@@ -19,7 +19,7 @@
         class="todo"
       >
         {{todo.title}}
-        <i @click="deleteTodo(todo.id)" class="fas fa-trash-alt"></i>
+        <i @click="deleteTodo(todo.id)" class="iconfont icon-laji"></i>
       </div>
     </div>
   </div>
@@ -37,14 +37,14 @@ export default {
       const updTodo = {
         id: todo.id,
         title: todo.title,
-        completed: !todo.completed
+        completed: !todo.completed,
       };
       this.updateTodo(updTodo);
-    }
+    },
   },
   created() {
     this.fetchTodos();
-  }
+  },
 };
 </script>
 

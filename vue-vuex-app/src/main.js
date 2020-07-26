@@ -3,6 +3,8 @@ import './plugins/axios'
 import App from './App.vue';
 import store from './store';
 
+import './assets/font/iconfont.css'
+
 Vue.config.productionTip = false;
 
 new Vue({

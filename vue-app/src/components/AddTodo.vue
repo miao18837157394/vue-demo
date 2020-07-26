@@ -9,11 +9,18 @@
 
 <script>
 // import uuid from "uuid";
+import axios from "axios";
 export default {
   name: "AddTodo",
+  mounted() {
+    axios.get("http://jsonplaceholder.typicode.com/todos").then((res) => {
+      this.today = res.data;
+    });
+  },
   data() {
     return {
       title: "",
+      today: [],
     };
   },
   methods: {

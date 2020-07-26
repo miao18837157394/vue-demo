@@ -8,11 +8,22 @@
 </template>
 
 <script>
+import axios from "axios";
 import Header from "./components/layout/Header";
 export default {
   name: "app",
+  data() {
+    return {
+      today: [],
+    };
+  },
   components: {
     Header,
+  },
+  mounted() {
+    axios.get("http://jsonplaceholder.typicode.com/todos").then((res) => {
+      this.today = res.data;
+    });
   },
 };
 </script>
